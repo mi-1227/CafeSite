@@ -1,0 +1,327 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: rgb(200, 171, 194);
+    background-color: rgb(227, 227, 227);
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(200, 171, 194);
+}
+
+header{
+    background-color: rgb(32, 38, 49,0.9);
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.header{
+    display: flex;
+    padding: 20px 0 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header img{
+    width: 15%;
+    padding-left: 30px;
+}
+ul{
+    list-style: none;
+    display: flex;
+    padding-right: 20px;
+}
+
+ul li{
+    padding: 15px;
+    font-size: 20px;
+}
+
+.header ul li a:hover{
+    color: rgb(255, 255, 255);
+}
+hero{
+    position: relative;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+hero img{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:30%;
+}
+
+hero p{
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.vi{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+video{
+    position: absolute;
+    z-index: -2;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    aspect-ratio: 16 / 9;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.intro{
+    margin-top: 150px;
+    background-color: rgb(32, 38, 49);
+    padding: 50px;
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 30px;
+}
+
+.contents{
+    display: flex;
+}
+
+.contents img{
+    width: 700px;
+    position: relative;
+    object-fit: cover;
+    width: 60%;
+    height: 100%;
+}
+
+.contents .pp{
+    position: relative;
+    width: 100%;
+}
+.contents p{
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu .button{
+    text-align: center;
+}
+
+.child{
+    display: inline-block;
+    margin: 50px;
+    background-color: rgb(227, 227, 227);
+    padding: 20px 150px;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.menu{
+    margin: 100px 0 100px;
+    background-color: rgb(32, 38, 49);
+    padding: 50px;
+}
+.menu .me{
+    display: none;
+}
+.child p{
+    color: rgb(32, 38, 49);
+}
+.info{
+    padding: 50px 0 200px;
+    color: rgb(32, 38, 49);
+}
+
+.info h1{
+    padding-bottom: 20px;
+}
+.table{
+    display: flex;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 20px 0 ;
+}
+
+tbody tr{
+    border-bottom: 2px solid white;
+}
+
+tr:last-child{
+    border: none;
+}
+.map{
+    width: 50%;
+    overflow: hidden;
+}
+footer{
+    padding: 150px;
+    background-color: rgb(32, 38, 49);
+}
+
+footer nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+}
+
+footer nav ul a{
+    display: inline-block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+footer ul li a{
+    display: inline-block;
+}
+footer ul li .instagram,footer ul li .facebook{
+    fill: rgb(200, 171, 194);
+}
+footer ul li.instagram a:hover,footer ul li.instagram a:active,footer ul li.facebook a:hover,
+footer ul li.facebook a:active {
+    fill: white !important;
+}
+
+
+/*参考　https://rilaks.jp/blog/pagetop-css/ */
+.pagetop {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #fff;
+    border: solid 2px #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: translateY(20%) rotate(-45deg);
+}
+
+@media (max-width:767px){
+    .header{
+        display: inline-block;
+        padding: 0;
+    }
+
+    .logo{
+        text-align: center;
+    }
+
+    .logo img{
+        width: 30%;
+        padding: 0;
+    }
+    .header ul{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    hero img{
+        top: 63%;
+        width: 45%;
+    }
+
+    hero p{
+        font-size: 18px;
+        top: 90%;
+    }
+
+    .contents{
+        display: block;
+    }
+
+    .intro,.menu{
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .intro{
+            padding: 20px 0 150px;
+        }
+
+        .menu{
+            padding: 20px 0 0;
+        }
+    .contents img{
+        position: relative;
+        width: 100vw;
+        height: 150px;
+        object-fit: cover;
+        object-position: center 70%;
+    }
+
+    .contents p{
+        padding-top: 150px;
+    }
+
+
+    .menu .pp{
+        display: none;
+    }
+
+    .menu .me{
+        display: block;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+    .info{
+        text-align: center;
+        padding: 0 70px 0 70px;
+    }
+    .map{
+        display: none;
+    }
+    .info h3{
+        padding: auto 0;
+    }
+}
